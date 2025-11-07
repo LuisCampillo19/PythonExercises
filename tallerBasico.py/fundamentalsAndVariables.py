@@ -14,7 +14,14 @@ def showNameAge():
 
     print(f"Hola {a}, tienes {b} de edad \n\n")
 
-    return a,b
+def addNumbers():
+    a = int(input("Ingresa el primer número: "))
+    b = int(input("Ingresa el segundo dígito: "))
+
+    c = a + b
+
+    print(f"La suma de los dos números es: {c}\n\n")
+
 
 while True:
     showMenuFuVa()
@@ -23,7 +30,7 @@ while True:
     if option == "1":
             showNameAge()
     elif option == "2":
-        print("")
+        addNumbers()
     elif option == "3":
         print("")
     elif option == "4":
@@ -36,6 +43,6 @@ while True:
         print("GoodBye...")
         break
     else:
-        print("Esta opción no existe. Vuelve a intentarlo")
+        print("Esta opción no existe. Vuelve a intentarlo\n\n")
 
 
