@@ -15,6 +15,14 @@ def counter():
         count +=1
         print(f"{count}\n")
 
+def countdownTimer():
+    n = int(input("¿Desde dónde quieres empezar la cuenta recresiva? ")) #5
+    count = n
+            
+    while count >= 0:
+        print(f"{count}\n")
+        count -=1 
+
 def addtion():
     n = int(input("¿Hasta dónde quieres sumar? "))
     add = 0
@@ -41,8 +49,8 @@ while True:
         addtion()
     elif option == "3":
         multiplicationTable()
-    # elif option == "4":
-    #     basicCalculator()
+    elif option == "4":
+        countdownTimer()
     # elif option == "5":
     #     gradeNotes()
     # elif option == "6":
