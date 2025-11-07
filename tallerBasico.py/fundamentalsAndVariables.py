@@ -30,6 +30,12 @@ def triangularArea():
 
     print(f"El área del triangulo es {c}\n\n")
 
+def temperatureCeFa():
+    celcius = float(input("Ingresa la temperatura en Celcius (dato numérico): "))
+    fahrenheit = (celcius * 9/5) + 32
+
+    print(f"De Celcius a Fahrenheit es: {fahrenheit}\n\n")
+
 while True:
     showMenuFuVa()
     option = input("Escoge una opción del 1 al 7: ")
@@ -41,7 +47,7 @@ while True:
     elif option == "3":
         triangularArea()
     elif option == "4":
-        print("")
+        temperatureCeFa()
     elif option == "5":
         print("")
     elif option == "6":
