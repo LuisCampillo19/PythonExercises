@@ -91,9 +91,25 @@ def gradeNotes():
     else:
         print("Esta fuera del rango\n\n")
 
+def compareNumbers():
+    
+    number1 = int(input("Dame el primer dígito a comparar: "))
+    number2 = int(input("Dame el segundo dígito a comparar: "))
+    number3 = int(input("Dame el tercer dígito a comparar: "))
 
-        
+    maxNumber = number1
+    minNumber = number1
 
+    if number2 > maxNumber:
+        maxNumber = number2
+    elif number3 >maxNumber:
+        maxNumber = number3
+    
+    if number2 < minNumber:
+        minNumber = number2
+    elif number3 < minNumber:
+        minNumber = number3
+    print(f"El número mayor es {maxNumber} y el númer más pequeño de los tres es {minNumber}\n\n")
 
 while True:
     showMenuCo()
@@ -110,9 +126,10 @@ while True:
         basicCalculator()
     elif option == "5":
         gradeNotes()
-    # elif option == "6":
-    # elif option == "7":
+    elif option == "6":
+        compareNumbers()
+    elif option == "7":
         print("Saliendo...")
-        #break
-    # else:
+        break
+    else:
         print("Opción no válida. Intenta de nuevo")
