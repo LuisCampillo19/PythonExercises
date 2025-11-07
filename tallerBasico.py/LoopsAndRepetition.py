@@ -8,14 +8,22 @@ def showMenuLoops():
     print("6. sumar hasta que el usuario escriba 0")
     print("7. Salir")
 
+def counter():
+    count = 0
+
+    while count < 10:
+        count +=1
+        print(f"{count}\n")
+
+
 
 while True:
     showMenuLoops()
         
     option = input("Ingresa una opción del 1 al 7: ")
 
-    # if option == "1":
-    #     legalAge()
+    if option == "1":
+        counter()
     # elif option == "2":
     #     numberPoNe()
     # elif option == "3":
