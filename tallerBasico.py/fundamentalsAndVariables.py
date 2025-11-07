@@ -22,17 +22,24 @@ def addNumbers():
 
     print(f"La suma de los dos números es: {c}\n\n")
 
+def triangularArea():
+    a = float(input("Ingresa la base del triangulo: "))
+    b = float(input("Ingresa la altura del triangulo: "))
+
+    c = (a * b)/2 #Base por altura divido en dos
+
+    print(f"El área del triangulo es {c}\n\n")
 
 while True:
     showMenuFuVa()
     option = input("Escoge una opción del 1 al 7: ")
 
     if option == "1":
-            showNameAge()
+        showNameAge()
     elif option == "2":
         addNumbers()
     elif option == "3":
-        print("")
+        triangularArea()
     elif option == "4":
         print("")
     elif option == "5":
