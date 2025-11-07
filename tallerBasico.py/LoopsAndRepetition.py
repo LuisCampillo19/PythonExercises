@@ -15,6 +15,13 @@ def counter():
         count +=1
         print(f"{count}\n")
 
+def addtion():
+    n = int(input("¿Hasta dónde quieres sumar? "))
+    add = 0
+    
+    for i in range(1,n + 1):
+        add += i
+        print(f"La sumatoria de {i} hasta {n} veces es {add}\n")
 
 
 while True:
@@ -24,8 +31,8 @@ while True:
 
     if option == "1":
         counter()
-    # elif option == "2":
-    #     numberPoNe()
+    elif option == "2":
+        addtion()
     # elif option == "3":
     #     evenOrOddNumber()
     # elif option == "4":
