@@ -52,6 +52,17 @@ def typeData():
     
     print(f"El {data} es de tipo {type}")
 
+def futureAge():
+    age = int(input("¿Cuántos años tienes? "))
+    if age >99:
+        print("Vos ya estas en el más allá...\n\n")
+    elif age <0:
+        print("Tu edad no puede ser negativa\n\n")
+    else:
+        finalAge = age + 10
+        print(f"Actualmente tienes {age}. En 10 años tendrás {finalAge}\n\n")
+
+
 while True:
     showMenuFuVa()
     option = input("Escoge una opción del 1 al 7: ")
@@ -67,7 +78,7 @@ while True:
     elif option == "5":
         typeData()
     elif option == "6":
-        print("")
+        futureAge()
     elif option == "7":
         print("GoodBye...")
         break
