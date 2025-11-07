@@ -79,6 +79,21 @@ def basicCalculator():
         else:
             print("Opción invalida. Intenta de nuevo\n")
 
+def gradeNotes():
+    n = float(input("¿Qué nota sacaste en el examen? "))
+    
+    if n <= 5.0 and n >4.0:
+        print("Excelente\n\n")
+    elif n <= 3.9 and n >= 3.0:
+        print("Aprobado\n\n")
+    elif n >0 and n <= 2.9:
+        print("Reprobado\n\n")
+    else:
+        print("Esta fuera del rango\n\n")
+
+
+        
+
 
 while True:
     showMenuCo()
@@ -93,7 +108,8 @@ while True:
         evenOrOddNumber()
     elif option == "4":
         basicCalculator()
-    # elif option == "5":
+    elif option == "5":
+        gradeNotes()
     # elif option == "6":
     # elif option == "7":
         print("Saliendo...")
