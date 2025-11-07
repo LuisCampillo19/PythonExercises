@@ -102,12 +102,12 @@ def compareNumbers():
 
     if number2 > maxNumber:
         maxNumber = number2
-    elif number3 >maxNumber:
+    if number3 >maxNumber:
         maxNumber = number3
     
     if number2 < minNumber:
         minNumber = number2
-    elif number3 < minNumber:
+    if number3 < minNumber:
         minNumber = number3
     print(f"El número mayor es {maxNumber} y el númer más pequeño de los tres es {minNumber}\n\n")
 

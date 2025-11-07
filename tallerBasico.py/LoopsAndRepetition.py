@@ -59,10 +59,10 @@ while True:
         countdownTimer()
     elif option == "5":
         rndm()
-    # elif option == "6":
-    #     compareNumbers()
-    # elif option == "7":
-    #     print("Saliendo...")
-    #     break
-    # else:
-    #     print("Opción no válida. Intenta de nuevo")
+    elif option == "6":
+        print("")
+    elif option == "7":
+        print("Saliendo...")
+        break
+    else:
+        print("Opción no válida. Intenta de nuevo")
