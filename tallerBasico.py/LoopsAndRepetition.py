@@ -23,6 +23,12 @@ def addtion():
         add += i
         print(f"La sumatoria de {i} hasta {n} veces es {add}\n")
 
+def multiplicationTable():
+    n = int(input("¿Que tabla queres multiplicar? "))
+
+    for i in range(1,11):
+        c = i *  n
+        print(f"La multiplicación de {i} x {n} = {c}\n")
 
 while True:
     showMenuLoops()
@@ -33,8 +39,8 @@ while True:
         counter()
     elif option == "2":
         addtion()
-    # elif option == "3":
-    #     evenOrOddNumber()
+    elif option == "3":
+        multiplicationTable()
     # elif option == "4":
     #     basicCalculator()
     # elif option == "5":
