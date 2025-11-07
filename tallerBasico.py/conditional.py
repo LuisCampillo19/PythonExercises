@@ -26,6 +26,14 @@ def numberPoNe():
     else:
         print(f"el {number} es cero\n\n")
 
+def evenOrOddNumber():
+    number = int(input("¿Qué número quieres validar? "))
+
+    if number % 2 == 0:
+        print(f"el número {number} es par\n\n")
+    else:
+        print(f"el número {number} es impar\n\n")
+
 while True:
     showMenuCo()
         
@@ -35,7 +43,8 @@ while True:
         legalAge()
     elif option == "2":
         numberPoNe()
-    # elif option == "3":
+    elif option == "3":
+        evenOrOddNumber()
     # elif option == "4":
     # elif option == "5":
     # elif option == "6":
