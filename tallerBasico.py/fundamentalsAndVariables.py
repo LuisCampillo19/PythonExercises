@@ -36,6 +36,22 @@ def temperatureCeFa():
 
     print(f"De Celcius a Fahrenheit es: {fahrenheit}\n\n")
 
+def typeData():
+
+    data = input("Ingresa cualquier tipo de dato: ")
+
+    try:
+        valueInt = int(data)
+        type = "entero (int)"
+    except:
+        try:
+            valueFloat = float(data)
+            type = "flotante (float)"
+        except:
+            type = "cadena (str)"
+    
+    print(f"El {data} es de tipo {type}")
+
 while True:
     showMenuFuVa()
     option = input("Escoge una opción del 1 al 7: ")
@@ -49,7 +65,7 @@ while True:
     elif option == "4":
         temperatureCeFa()
     elif option == "5":
-        print("")
+        typeData()
     elif option == "6":
         print("")
     elif option == "7":
