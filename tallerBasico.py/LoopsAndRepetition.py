@@ -1,10 +1,12 @@
+import random
+
 def showMenuLoops():
     print("-------------------- MENÚ PRINCIPAL -----------------------")
     print("1. Contar del 1 al 10")
     print("2. Sumatoria del 1 al n")
     print("3. Tabla de multiplicar")
     print("4. Contador regresivo con while")
-    print("5. Adivina el número")
+    print("5. Adivina el número de 1 a 100")
     print("6. sumar hasta que el usuario escriba 0")
     print("7. Salir")
 
@@ -38,6 +40,10 @@ def multiplicationTable():
         c = i *  n
         print(f"La multiplicación de {i} x {n} = {c}\n")
 
+def rndm():
+    numb = random.randint(1,100)
+    print(f"El número random de 1 a 100 fue {numb}\n\n")
+
 while True:
     showMenuLoops()
         
@@ -51,8 +57,8 @@ while True:
         multiplicationTable()
     elif option == "4":
         countdownTimer()
-    # elif option == "5":
-    #     gradeNotes()
+    elif option == "5":
+        rndm()
     # elif option == "6":
     #     compareNumbers()
     # elif option == "7":
