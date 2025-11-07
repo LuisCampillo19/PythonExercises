@@ -17,7 +17,14 @@ def legalAge():
         print("Eres menor de edad\n\n")
 
 def numberPoNe():
-    number = int(input("¿Qué número quieres validar?"))
+    number = int(input("¿Qué número quieres validar? "))
+
+    if number <0:
+        print(f"el {number} es negativo\n\n")
+    elif number >0:
+        print(f"el {number} es positivo\n\n")
+    else:
+        print(f"el {number} es cero\n\n")
 
 while True:
     showMenuCo()
@@ -26,7 +33,8 @@ while True:
 
     if option == "1":
         legalAge()
-    # elif option == "2":
+    elif option == "2":
+        numberPoNe()
     # elif option == "3":
     # elif option == "4":
     # elif option == "5":
