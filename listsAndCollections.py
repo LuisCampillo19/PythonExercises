@@ -8,12 +8,18 @@ def showMenuLoops():
     print("6. Eliminar duplicados")
     print("7. Salir")
 
+def fruitList():
+    fruit = ["Manzana", "Uva", "Banano", "Naranja", "Sandia", "Pera"]
+    print("Lista de frutas:\n")
+    for i in fruit:
+        print(f"{i}\n")
+
 while True:
     showMenuLoops()
     option = input("Selecciona una opción: ")
 
     if option == "1":
-        print()
+        fruitList()
     elif option == "2":
         print()
     elif option == "3":
