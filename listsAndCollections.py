@@ -37,8 +37,20 @@ def addRemoveFruit():
     else:
         print("Error de opción. \n\n")
 
-    
+def searchFruit():
+    n = input("¿Qué fruta quieres buscar? ")
+    if not n:
+        print("No ingresaste ninguna fruta.\n")
+        return
 
+    matches = [(i + 1, f) for i, f in enumerate(fruit) if n.lower() in f.lower()]
+    if matches:
+        print("Frutas encontradas:")
+        for i, f in matches:
+            print(f"{i}. {f}")
+        print()
+    else:
+        print(f"La fruta '{n}' no se encuentra en la lista.\n")
 while True:
     showMenuLoops()
     option = input("Selecciona una opción: ")
@@ -48,7 +60,7 @@ while True:
     elif option == "2":
         addRemoveFruit()
     elif option == "3":
-        print()
+        searchFruit()
     elif option == "4":
         print()
     elif option == "5":
