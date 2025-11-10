@@ -49,11 +49,10 @@ def sumZero():
     while True:
         n = int(input("Suma un número (si el número es 0 todo termina): "))
 
-        if n == 0:
+        if n == 0: 
             print(f"La suma total es {suma}\n\n")
             break
-        suma += n
-        print(f"La suma actual es {suma}\n")
+        suma += n 
 
 while True:
     showMenuLoops()

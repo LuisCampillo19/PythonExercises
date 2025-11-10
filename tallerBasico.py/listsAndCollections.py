@@ -51,6 +51,24 @@ def searchFruit():
         print()
     else:
         print(f"La fruta '{n}' no se encuentra en la lista.\n")
+
+def numberListAverage():
+    numbers = []
+    while True:
+        num = input("Ingresa un número (o 'fin' para terminar): ")
+        if num.lower() == 'fin':
+            break
+        try:
+            numbers.append(float(num))
+        except ValueError:
+            print("Ingresa un número")
+    
+    if numbers:
+        average = sum(numbers) / len(numbers)
+        print(f"El promedio de los números ingresados es: {average}\n")
+    else:
+        print("No hay número ingresados\n")
+        
 while True:
     showMenuLoops()
     option = input("Selecciona una opción: ")
@@ -62,7 +80,7 @@ while True:
     elif option == "3":
         searchFruit()
     elif option == "4":
-        print()
+        numberListAverage()
     elif option == "5":
         print()
     elif option == "6":
