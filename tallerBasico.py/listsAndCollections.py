@@ -98,7 +98,7 @@ def removeDuplicates():
             print("Ingresa un número válido")
     
     print(f"Números sin duplicados: {numbers}\n")
-    
+
 while True:
     showMenuLoops()
     option = input("Selecciona una opción: ")
@@ -114,7 +114,7 @@ while True:
     elif option == "5":
         evenNumbers()
     elif option == "6":
-        print()
+        removeDuplicates()
     elif option == "7":
         print("Saliendo...")
         break
