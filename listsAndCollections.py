@@ -8,11 +8,36 @@ def showMenuLoops():
     print("6. Eliminar duplicados")
     print("7. Salir")
 
+fruit = ["Manzana", "Uva", "Banano", "Naranja", "Sandia", "Pera"]
+    
 def fruitList():
-    fruit = ["Manzana", "Uva", "Banano", "Naranja", "Sandia", "Pera"]
     print("Lista de frutas:\n")
     for i in fruit:
         print(f"{i}\n")
+
+def addRemoveFruit():
+    print("1. Agregar frutas")
+    print("2. Eliminar frutas")
+    print("3. Volver al menú principal")
+
+    option = input("¿Qué quieres hacer? (recuerda que es de 1 a 3): ")
+    if option == "1":
+        newFruit = input("¿Qué fruta quieres agregar? ")
+        fruit.append(newFruit) #añadir a la lista .append()
+        print(f"{newFruit} fue agregada a la lista\n")
+    elif option == "2":
+        delectFruit = input("¿Qué fruta quieres eliminar? ")
+        if delectFruit in fruit:
+            fruit.remove(delectFruit)
+            print(f"{delectFruit} fue eliminada de la lista\n")
+        else:
+            print(f"{delectFruit} no se encuentra en la lista\n")
+    elif option == "3":
+        print("Volviendo al menú principal...\n\n")
+    else:
+        print("Error de opción. \n\n")
+
+    
 
 while True:
     showMenuLoops()
@@ -21,7 +46,7 @@ while True:
     if option == "1":
         fruitList()
     elif option == "2":
-        print()
+        addRemoveFruit()
     elif option == "3":
         print()
     elif option == "4":
@@ -33,3 +58,5 @@ while True:
     elif option == "7":
         print("Saliendo...")
         break
+    else:
+        print("Opción no válida.\n")
