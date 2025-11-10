@@ -68,7 +68,22 @@ def numberListAverage():
         print(f"El promedio de los números ingresados es: {average}\n")
     else:
         print("No hay número ingresados\n")
-        
+
+def evenNumbers():
+    numbers = []
+    while True:
+        num = input("Ingresa un número (o 'fin' para terminar): ")
+        if num.lower() == 'fin':
+            break
+        try:
+            number = int(num)
+            if number % 2 == 0:
+                numbers.append(number)
+        except ValueError:
+            print("Ingresa un número válido")
+    
+    print(f"Números pares ingresados: {numbers}\n")
+
 while True:
     showMenuLoops()
     option = input("Selecciona una opción: ")
@@ -82,7 +97,7 @@ while True:
     elif option == "4":
         numberListAverage()
     elif option == "5":
-        print()
+        evenNumbers()
     elif option == "6":
         print()
     elif option == "7":
