@@ -84,6 +84,21 @@ def evenNumbers():
     
     print(f"Números pares ingresados: {numbers}\n")
 
+def removeDuplicates():
+    numbers = []
+    while True:
+        num = input("Ingresa un número (o 'fin' para terminar): ")
+        if num.lower() == 'fin':
+            break
+        try:
+            number = int(num)
+            if number not in numbers:
+                numbers.append(number)
+        except ValueError:
+            print("Ingresa un número válido")
+    
+    print(f"Números sin duplicados: {numbers}\n")
+    
 while True:
     showMenuLoops()
     option = input("Selecciona una opción: ")
