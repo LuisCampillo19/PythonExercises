@@ -6,7 +6,7 @@ def showMenuLoops():
     print("2. Sumatoria del 1 al n")
     print("3. Tabla de multiplicar")
     print("4. Contador regresivo con while")
-    print("5. Adivina el número de 1 a 100")
+    print("5. Número random de 1 a 100")
     print("6. sumar hasta que el usuario escriba 0")
     print("7. Salir")
 
@@ -44,6 +44,17 @@ def rndm():
     numb = random.randint(1,100)
     print(f"El número random de 1 a 100 fue {numb}\n\n")
 
+def sumZero():
+    suma = 0
+    while True:
+        n = int(input("Suma un número (si el número es 0 todo termina): "))
+
+        if n == 0:
+            print(f"La suma total es {suma}\n\n")
+            break
+        suma += n
+        print(f"La suma actual es {suma}\n")
+
 while True:
     showMenuLoops()
         
@@ -60,7 +71,7 @@ while True:
     elif option == "5":
         rndm()
     elif option == "6":
-        print("")
+        sumZero()
     elif option == "7":
         print("Saliendo...")
         break
