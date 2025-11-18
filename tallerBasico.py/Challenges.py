@@ -1,3 +1,5 @@
+import math
+
 def showMenuCo():
     print("-------------------- MENÚ PRINCIPAL -----------------------")
     print("1. Sistema de calificaciones")
@@ -130,6 +132,113 @@ def atmMachine():
         else:
             print("Opción no válida, intenta de nuevo")
 
+def mgtStudent():
+    students = []
+
+    while True:
+        print("\nGestión de estudiantes:")
+        print("1. Agregar estudiante")
+        print("2. Ver estudiantes")
+        print("3. Buscar estudiante por nombre")
+        print("4. Volver al menú principal")
+
+        optionStu = input("Selecciona una opción (1-4): ")
+        if optionStu == "1":
+            name = input("Nombre del estudiante: ")
+            age = input("Edad del estudiante: ")
+            student = {"name": name, "age": age}
+            students.append(student)
+            print(f"Estudiante {name} agregado.")
+        elif optionStu == "2":
+            if not students:
+                print("No hay estudiantes registrados.")
+            else:
+                print("Lista de estudiantes:")
+                for student in students:
+                    print(f"Nombre: {student['name']}, Edad: {student['age']}")
+        elif optionStu == "3":
+            searchName = input("Ingresa el nombre del estudiante a buscar: ")
+            foundStudents = [s for s in students if s['name'].lower() == searchName.lower()]
+            if foundStudents:
+                for student in foundStudents:
+                    print(f"Encontrado - Nombre: {student['name']}, Edad: {student['age']}")
+            else:
+                print("Estudiante no encontrado.")
+        elif optionStu == "4":
+            break
+        else:
+            print("Opción no válida, intenta de nuevo")
+
+def advancedCalculator():
+    def sumar(x, y):
+        return x + y
+
+    def restar(x, y):
+        return x - y
+
+    def multiplicar(x, y):
+        return x * y
+
+    def dividir(x, y):
+        if y == 0:
+            return "Error: No se puede dividir por cero."
+        return x / y
+
+    def potencia(base, exponente):
+        return math.pow(base, exponente)
+
+    def raiz_cuadrada(x):
+        if x < 0:
+            return "Error: No existe raíz real de número negativo."
+        return math.sqrt(x)
+
+    print("\n--- CALCULADORA AVANZADA ---")
+    
+    while True:
+        print("\nOpciones:")
+        print("1. Sumar")
+        print("2. Restar")
+        print("3. Multiplicar")
+        print("4. Dividir")
+        print("5. Potencia (x elevado a y)")
+        print("6. Raíz Cuadrada")
+        print("7. Volver al menú principal")
+
+        opcionCalc = input("Elige una operación (1-7): ")
+
+        if opcionCalc == "7":
+            break
+        
+        if opcionCalc in ('1', '2', '3', '4', '5', '6'):
+            try:
+                if opcionCalc == "6":
+                    num1 = float(input("Ingresa el número: "))
+                    resultado = raiz_cuadrada(num1)
+                else:
+                    num1 = float(input("Ingresa el primer número: "))
+                    num2 = float(input("Ingresa el segundo número: "))
+
+                    if opcionCalc == "1":
+                        resultado = sumar(num1, num2)
+                    elif opcionCalc == "2":
+                        resultado = restar(num1, num2)
+                    elif opcionCalc == "3":
+                        resultado = multiplicar(num1, num2)
+                    elif opcionCalc == "4":
+                        resultado = dividir(num1, num2)
+                    elif opcionCalc == "5":
+                        resultado = potencia(num1, num2)
+                
+
+                print(f"Resultado: {resultado}")
+
+            except ValueError:
+                print("Error: Por favor ingresa solo números válidos.")
+        else:
+            print("Opción no válida.")
+
+
+
 while True:
     showMenuCo()
         
@@ -141,10 +250,10 @@ while True:
         shoppingCart()
     elif option == "3":
         atmMachine()
-    # elif option == "4":
-    #     # basicCalculator()
-    # elif option == "5":
-    #     # gradeNotes()
+    elif option == "4":
+        mgtStudent()
+    elif option == "5":
+        advancedCalculator()
     # elif option == "6":
     #     # compareNumbers()
     # elif option == "7":
