@@ -139,8 +139,8 @@ while True:
         gradeSystem()
     elif option == "2":
         shoppingCart()
-    # elif option == "3":
-    #     # evenOrOddNumber()
+    elif option == "3":
+        atmMachine()
     # elif option == "4":
     #     # basicCalculator()
     # elif option == "5":
