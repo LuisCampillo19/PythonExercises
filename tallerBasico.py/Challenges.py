@@ -191,8 +191,6 @@ def advancedCalculator():
         if x < 0:
             return "Error: No existe raíz real de número negativo."
         return math.sqrt(x)
-
-    print("\n--- CALCULADORA AVANZADA ---")
     
     while True:
         print("\nOpciones:")
@@ -237,7 +235,65 @@ def advancedCalculator():
         else:
             print("Opción no válida.")
 
+def contactAgenda():
+    contacts = []
 
+    while True:
+        print("\n Agenda:")
+        print("1. Agregar contacto")
+        print("2. Ver todos los contactos")
+        print("3. Buscar contacto por nombre")
+        print("4. Eliminar contacto")
+        print("5. Volver al menú principal")
+
+        optionContact = input("Selecciona una opción (1-5): ")
+
+        if optionContact == "1":
+            name = input("Nombre del contacto: ")
+            phone = input("Teléfono: ")
+            email = input("Email: ")
+            
+            contact = {"name": name, "phone": phone, "email": email}
+            contacts.append(contact)
+            print(f"--> Contacto '{name}' agregado.")
+
+        elif optionContact == "2":
+            if not contacts:
+                print("La agenda está vacía.")
+            else:
+                for contact in contacts:
+                    print(f"Nombre: {contact['name']}, Teléfono: {contact['phone']}, Email: {contact['email']}")
+
+        elif optionContact == "3":
+            searchName = input("Ingresa el nombre del contacto a buscar: ")
+            foundContacts = [c for c in contacts if c['name'].lower() == searchName.lower()]
+
+            if foundContacts:
+                print("\n CONTACTOS ENCONTRADOS ")
+                for contact in foundContacts:
+                    print(f"Nombre: {contact['name']}, Teléfono: {contact['phone']}, Email: {contact['email']}")
+            else:
+                print(f"Contacto '{searchName}' no encontrado.")
+
+        elif optionContact == "4":
+            nameToDelete = input("Ingresa el nombre del contacto que deseas eliminar: ")
+            
+            contactIndex = -1
+            for i, contact in enumerate(contacts):
+                if contact['name'].lower() == nameToDelete.lower():
+                    contactIndex = i
+                    break
+            
+            if contactIndex != -1:
+                deletedContact = contacts.pop(contactIndex)
+                print(f"Contacto '{deletedContact['name']}' eliminado exitosamente.")
+            else:
+                print(f"Contacto '{nameToDelete}' no encontrado para eliminar.")
+
+        elif optionContact == "5":
+            break
+        else:
+            print("Opción no válida.")
 
 while True:
     showMenuCo()
@@ -254,10 +310,10 @@ while True:
         mgtStudent()
     elif option == "5":
         advancedCalculator()
-    # elif option == "6":
-    #     # compareNumbers()
-    # elif option == "7":
-    #     print("Saliendo...")
-    #     break
+    elif option == "6":
+        contactAgenda()
+    elif option == "7":
+        print("Saliendo...")
+        break
     else:
         print("Opción no válida. Intenta de nuevo")
