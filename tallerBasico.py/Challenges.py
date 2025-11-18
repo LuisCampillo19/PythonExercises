@@ -43,8 +43,6 @@ def gradeSystem():
     print(f"Calificación más baja: {lowest}")
     print(f"Estado: {status}")
 
-
-
 def shoppingCart():
     cart = []
 
@@ -91,7 +89,46 @@ def shoppingCart():
         else:
             print("No hay opción válida, intenta de nuevo")
     
-# def atmMachine():
+def atmMachine():
+    money = 1000
+    
+    while True:
+        print("\nCajero automático:")
+        print("1. Depositar dinero")
+        print("2. Ver saldo")
+        print("3. Retirar dinero")
+        print("4. Volver al menú principal")
+
+        optionATM = input("Selecciona una opción (1-4): ")
+        if optionATM == "1":
+            try:
+                desposit = float(input("¿Cuánto quieres depositar? "))
+                if desposit > 0:
+                    money += desposit
+                    print(f"Ahora tienes ${money:.2f} en tu cuenta")
+                else:
+                    print("Ingresa una cantidad válida para depositar")
+            except ValueError:
+                print("Ingresa un número válido por favor")
+        elif optionATM == "2":
+            print(f"Tu saldo actual es: ${money:.2f}")
+        elif optionATM == "3":
+            try:
+                withdraw = float(input("¿Cuánto quieres retirar? "))
+                if withdraw <= 0:
+                    print("La cantidad debe ser positiva")
+                elif withdraw > money:
+                    print(f"Fondos insuficientes. {money:.2f} disponibles")
+                else:
+                    money -= withdraw
+                    print(f"Has retirado ${withdraw:.2f}. Saldo restante: ${money:.2f}")
+            except ValueError:
+                print("Ingresa un número válido")
+        elif optionATM == "4":
+            print("Regresando al menú principal")
+            break
+        else:
+            print("Opción no válida, intenta de nuevo")
 
 while True:
     showMenuCo()
